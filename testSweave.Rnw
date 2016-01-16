@@ -1,0 +1,40 @@
+\documentclass[twoside,UTF8]{ctexart}
+\usepackage[T1]{fontenc}
+\usepackage{CJKutf8}
+\usepackage[letterpaper]{geometry}
+\usepackage{esint}
+
+\makeatletter
+\usepackage{Sweave}
+
+\makeatother
+
+\begin{document}
+\begin{CJK}{UTF8}{}%
+
+\title{你好，中文}
+\author{我是作者}
+\maketitle
+
+\setkeys{Gin}{width=.8\linewidth}
+
+<<example_cn,echo=TRUE,fig=TRUE>>=
+pdf.options(family='GB1')
+@
+
+我是正文。
+
+\begin{figure}
+\begin{center}
+<<rnorm,fig=TRUE>>=
+pdf.options(family='GB1')
+Sys.setlocale(category = "LC_ALL", locale = "en_SE.utf8")
+rnorm(10)
+plot(rnorm(25), pch=1:25, main='中文字符',
+     xlab='$\\alpha + \\beta$', ylab='$\\gamma$')
+@
+\end{center}
+\caption{一幅pgfSweave图}
+\end{figure}
+\end{CJK}
+\end{document}

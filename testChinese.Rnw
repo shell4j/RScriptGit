@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{CJKutf8} 
+\title{A Test Sweave Document}
+\author{Yihui Xie}
+
+\usepackage{Sweave}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\maketitle
+
+We can take a look at some random numbers from N(0, 1):
+\begin{Schunk}
+\begin{Sinput}
+> x = rnorm(5)
+> x
+\end{Sinput}
+\begin{Soutput}
+[1]  0.74541470 -1.49287775 -1.66834084  0.08252667  0.92772016
+\end{Soutput}
+\end{Schunk}
+
+The 3rd number is -1.6683408359077.
+
+Draw a plot for the iris data:
+\begin{Schunk}
+\begin{Sinput}
+> plot(iris[, 1:2])
+\end{Sinput}
+\end{Schunk}
+\begin{CJK}{UTF8}{gkai}  
+\part{}
+中国人
+\end{CJK}
+
+\end{document}
