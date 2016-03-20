@@ -1,0 +1,4 @@
+
+### [关系数据库](https://en.wikipedia.org/wiki/Data_mining)
+
+##### 基于Oracle和MySQL，提供高性能、高可用、一致性的web信息服务；构建Java/python Web开发框架，提供高并发的事物性的服务。 #####

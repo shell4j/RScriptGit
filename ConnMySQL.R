@@ -1,0 +1,6 @@
+library(DBI)
+library(RMySQL)
+drv<-dbDriver("MySQL")
+con <- dbConnect(drv,user="root",password="hy920602",houst=localhost,dbname = "sakila")
+dbListTables(con)
+data=dbReadTable(con,"actor")

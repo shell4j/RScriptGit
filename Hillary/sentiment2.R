@@ -1,5 +1,5 @@
 ###读取文件，
-#Sys.setlocale("LC_ALL", "C") 
+Sys.setlocale("LC_ALL", "C") 
 library(readr)
 library(syuzhet)
 library(RSQLite)

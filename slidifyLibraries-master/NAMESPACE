@@ -1,0 +1,6 @@
+export(getCells)
+export(hook_interactive)
+export(runCode)
+export(make_interactive)
+export(renderCodeCells)
+export(slidifyUI)
