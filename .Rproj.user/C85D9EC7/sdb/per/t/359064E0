@@ -1,0 +1,18 @@
+{
+    "contents" : "data=read.csv(\"D:/Kaggle/DMinART/knowC.csv\",stringsAsFactors=FALSE)\n#data=read.csv(\"D:/Kaggle/DMinART/reasonD.csv\",stringsAsFactors=FALSE)\nd1=data[,1:18]\nnames(d1)=c(\"毛泽东\",\"李娜\",\"老子\",\"和谐\",\"仁爱\",\n            \"道\",\"瓷器\",\"书法\",\"昆曲\",\"珠穆朗玛峰\",\"竹子\",\"白鳍豚\"\n            ,\"太极拳\",\"麻将\",\"白酒\",\"长城\",\"丝绸之路\",\"中秋节\")\n#fa=factanal(d1,factors = 6)\nlibrary(psych)\ncov=cov(d1)\ncor=cov2cor(cov)\nfa.parallel(cor)\nfa=fa(cor,nfactors=3,rotate=\"varimax\",fm=\"pa\")\nfa.diagram(fa)\n\n\ndata=read.csv(\"D:/Kaggle/DMinART/touchF.csv\",stringsAsFactors=FALSE)\n#data=read.csv(\"D:/Kaggle/DMinART/infoE.csv\",stringsAsFactors=FALSE)\nlibrary(psych)\n\ndim(data)\nd1=data[,1:8]\nnames(d1)=c(\"书籍\",\"报纸杂志\",\"录制音乐\",\"电影\",\"电视\",\"电脑\",\"艺术手工\",\"表演艺术\")\ncov=cov(d1)\ncor=cov2cor(cov)\n#fa.parallel(cor)\nfa=fa(cor,nfactors=2,rotate=\"varimax\",fm=\"pa\")\nfa.diagram(fa)",
+    "created" : 1459173500997.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3204717582",
+    "id" : "359064E0",
+    "lastKnownWriteTime" : 1459661975,
+    "path" : "D:/Kaggle/DMinART/preC.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

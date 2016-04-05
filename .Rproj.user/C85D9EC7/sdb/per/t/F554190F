@@ -1,0 +1,18 @@
+{
+    "contents" : "data=read_csv(\"D:/Kaggle/DMinART/rawData1.csv\")\nc=c(92:95,104,39)\ndataE=data[,c]\nwrite.csv(dataE,\"D:/Kaggle/DMinART/infoE.csv\")\n\nd1=dataE\nnames(d1)=c(\"广播电视\",\"报纸杂志\",\"家人朋友\",\"互联网\",\"阅读方式\",\"信息来源\")\nlibrary(psych)\nd1=d1[,1:4]\ncov=cov(d1)\ncor=cov2cor(cov)\nfa.parallel(cor)\nfa=fa(cor,nfactors=2,rotate=\"varimax\",fm=\"pa\")\nfa.diagram(fa)\nView(data)",
+    "created" : 1459662463084.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "892008457",
+    "id" : "F554190F",
+    "lastKnownWriteTime" : 1459664877,
+    "path" : "D:/Kaggle/DMinART/testE.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,18 @@
+{
+    "contents" : "data=read.csv(\"D:/Kaggle/DMinART/levelB.csv\",stringsAsFactors=FALSE)\ndata=data[,-5]\nwrite.csv(data,\"D:/Kaggle/DMinART/dataB.csv\")",
+    "created" : 1459655338611.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3150866471",
+    "id" : "EA3E09BC",
+    "lastKnownWriteTime" : 1459658934,
+    "path" : "D:/Kaggle/DMinART/testB.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

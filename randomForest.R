@@ -33,23 +33,21 @@ library(parallel)
 library(doParallel)
 cl <- makeCluster(3)
 registerDoParallel(cl)
-rf.model<- foreach(ntree=rep(200, 3), 
+rf.model<- foreach(ntree=rep(150, 3), 
                    .combine=combine,
                    .packages='randomForest') %dopar%
-                   randomForest(TARGET~.,data=train,ntree = 400,
+                   randomForest(TARGET~.,data=train,ntree = 450,
                         importance=TRUE)
 stopCluster(cl)
 
 
 preds=predict(rf.model,as.matrix(test))
+preds[preds>0.8]=0.88
+preds[preds<0]=0
 submission <- data.frame(ID=test$ID,TARGET=preds)
-submission[submission$TARGET>0.8,]=0.88
-submission[submission$TARGET<0,]=0
 write.csv(submission, "D:/santander/rf_submission.csv", row.names = F)
-
-submission[submission$TARGET>0.6&&submission$TARGET<0.8,]=0.8
-submission[submission$TARGET>0.5&&submission$TARGET<0.6,]=0.6
-submission[submission$TARGET<0.133&&submission>0.1,]=0.1
-submission[submission$TARGET<0.1&&submission>0.05]=0.05
-#submission[,submission$TARGET<0]=0.05
+preds[preds<0.133 & preds>0.1]=0.1
+preds[preds<0.2 & preds>0.1]=0.1
+preds[preds<0.3 & preds>0.2]=0.2
+submission <- data.frame(ID=test$ID,TARGET=preds)
 write.csv(submission, "D:/santander/rf_submission1.csv", row.names = F)

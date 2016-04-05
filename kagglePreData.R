@@ -1,0 +1,9 @@
+library(readr)
+#library(dplyr)
+library(mice)
+##数据预处理
+train=read_csv("D:/santander/train.csv")
+test=read_csv("D:/santander/test.csv")
+#imp=mice(train)
+#train1=complete(imp)
+data=data[!is.na(train),]

@@ -1,0 +1,17 @@
+{
+    "contents" : "#library(foreign)\n#data=read.spss(\"D:/Kaggle/DMinART/rawData.sav\",TRUE,TRUE)\nlibrary(readr)\ndata=read_csv(\"D:/Kaggle/DMinART/rawData1.csv\")\nView(data)\n#data1=data[,1:31]\n#write_csv(data1,\"D:/Kaggle/DMinART/basicA.csv\")\n",
+    "created" : 1458822703186.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1824765134",
+    "id" : "72B14F1A",
+    "lastKnownWriteTime" : 1459663416,
+    "path" : "D:/Kaggle/DMinART/DMinART.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

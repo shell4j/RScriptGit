@@ -1,0 +1,18 @@
+{
+    "contents" : "data=read.csv(\"D:/Kaggle/DMinART/reasonD.csv\",stringsAsFactors=FALSE)\nd1=data\nlibrary(psych)\n\ncov=cov(d1)\ncor=cov2cor(cov)\nfa.parallel(cor)\nfa=fa(cor,nfactors=3,rotate=\"varimax\",fm=\"pa\")\nfa.diagram(fa)\nView(data)",
+    "created" : 1459661978201.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2128235164",
+    "id" : "74075645",
+    "lastKnownWriteTime" : 1459666492,
+    "path" : "D:/Kaggle/DMinART/testD.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,18 @@
+{
+    "contents" : "data=read.csv(\"D:/Kaggle/DMinART/touchF.csv\",stringsAsFactors=FALSE)\n\nd1=data[,1:8]\nnames(d1)=c(\"书籍\",\"报纸杂志\",\"录音音乐\",\"电影\",\"电视\",\"电脑\"\n            ,\"手工艺术品\",\"表演艺术\")\nlibrary(psych)\ncov=cov(d1)\ncor=cov2cor(cov)\nfa.parallel(cor)\nfa=fa(cor,nfactors=2,rotate=\"varimax\",fm=\"pa\")\nfa.diagram(fa)\nView(data)",
+    "created" : 1459666501380.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3086176239",
+    "id" : "4B13261D",
+    "lastKnownWriteTime" : 1459667078,
+    "path" : "D:/Kaggle/DMinART/testF.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
